@@ -4,7 +4,7 @@
 The following columns are added:
 - ELO rating for the team in question
 - Average ELO rating for all of that team's domestic league opponents (as a measure of strength of schedule across the season)
-- Team ELO rating - Average domestic oppoisition ELO rating (as a measure of relative ease of eaverage fixture)
+- Team ELO rating - Average domestic opposition ELO rating (as a measure of relative ease of eaverage fixture)
 
 **The file path to the dataset to be augmented in .xlsx format must be given at the first argument to the function call.**
 
