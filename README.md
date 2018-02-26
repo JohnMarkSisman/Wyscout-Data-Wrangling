@@ -13,6 +13,9 @@ ClubElo uses abbreviated team names in their dataset, so clubelo_plugin.R must r
 **The path to save the augmented data to must be given as the third and final argument to the function call** (without file suffix - the resultant file is automatically an Excel_csv file).
 
 **EXAMPLE FUNCTION CALL:**
-clubelo_plugin("C:/Users/me/Documents/wyscout_data.xlsx", 
+
+clubelo_plugin(
+"C:/Users/me/Documents/wyscout_data.xlsx", 
 "C:/Users/me/Documents/team_names.csv",
-"C:/Users/me/Documents/wyscout_data_mod")
+"C:/Users/me/Documents/wyscout_data_mod"
+)
