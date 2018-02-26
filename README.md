@@ -10,4 +10,9 @@ The following columns are added:
 
 ClubElo uses abbreviated team names in their dataset, so clubelo_plugin.R must reference a look-up table to match team names as they appear on ClubElo to the corresponding names as they appear in the original dataset. One such look-up table for matching against Wyscout team names is found at *team_names.csv*. **The file path to the lookup table must be given as the second argument to the function call.**
 
-**The path to save the augmented data to must be given as the third and final argument to the function call** (without file suffix - the resultant file is an Excel_csv file).
+**The path to save the augmented data to must be given as the third and final argument to the function call** (without file suffix - the resultant file is automatically an Excel_csv file).
+
+**EXAMPLE FUNCTION CALL:**
+clubelo_plugin("C:/Users/me/Documents/wyscout_data.xlsx", 
+"C:/Users/me/Documents/team_names.csv",
+"C:/Users/me/Documents/wyscout_data_mod")
