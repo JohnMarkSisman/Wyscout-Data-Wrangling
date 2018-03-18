@@ -32,10 +32,10 @@ for (i in 1:nrow(clubelo)){
 clubelo <- mutate(clubelo,av_domestic_elo_diff = Elo - av_domestic_opp_elo)
 
 #Transcribe ELO, average opposition ELO and average ELO differential to wyscout data table
-wyscout_data <- mutate(wyscout_data,clubelo_name = team_names$clubelo_name[match(Team, team_names$wyscout_name)])
-wyscout_data <- mutate(wyscout_data,Elo = clubelo$Elo[match(clubelo_name, clubelo$Club)])
-wyscout_data <- mutate(wyscout_data,av_domestic_opp_elo = clubelo$av_domestic_opp_elo[match(clubelo_name, clubelo$Club)])
-wyscout_data <- mutate(wyscout_data,av_domestic_elo_diff = clubelo$av_domestic_elo_diff[match(clubelo_name, clubelo$Club)])
+wyscout_data <- mutate(wyscout_data,clubelo_name = team_names$clubelo_name[match(Team, team_names$wyscout_name)],
+                       Elo = clubelo$Elo[match(clubelo_name, clubelo$Club)],
+                       av_domestic_opp_elo = clubelo$av_domestic_opp_elo[match(clubelo_name, clubelo$Club)],
+                       av_domestic_elo_diff = clubelo$av_domestic_elo_diff[match(clubelo_name, clubelo$Club)])
 wyscout_data <- select(wyscout_data,-clubelo_name)
 
 #Save data
